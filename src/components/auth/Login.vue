@@ -28,22 +28,22 @@ export default {
         this.greeting = "Welcome back!";
         this.question = "Don't have an account?";
         this.buttonText = "Create Account";
-        this.title = 'Login'
+        this.title = 'Sign in to Chat'
       } else {
         this.greeting = "Welcome!";
         this.question = "Already have an account?";
         this.buttonText = "Login";
-        this.title = 'Register'
+        this.title = 'Create an Account'
       }
     }
   },
   data() {
     return {
-      register: "start",
+      register: true,
       greeting: "Welcome back!",
       question: "Don't have an account?",
-      buttonText: "Create Account",
-      title: 'Login'
+      buttonText: "Create an Account",
+      title: 'Sign in to Chat'
     };
   }
 };

@@ -1,7 +1,6 @@
 <template>
   <div class="slider" v-bind:class="{'slide-right':(register === true), 'slide-left':(!register || register == 'start')}">
-    <h1
-      class="greeting">{{greeting}}</h1>
+    <h1 class="greeting">{{greeting}}</h1>
     <p class="question">{{question}}</p>
     <button class="register-button" @click="$emit('slide')">{{buttonText}}</button>
   </div>
@@ -44,12 +43,11 @@ export default {
   background: rgb(21, 126, 255);
 }
 .slide-right {
-  animation: scaleNSlideRight .45s ease-in-out;
+  animation: scaleNSlideRight .45s ease;
   animation-fill-mode: forwards;
 }
-.slide-left {
-  animation: scaleNSlideLeft 0.45s ease-in-out;
-  /* animation-fill-mode: forwards; */
+.slide-left + .register-button{
+  animation: scaleNSlideLeft 0.45s ease;
 }
 .greeting {
   color: whitesmoke;
@@ -64,14 +62,14 @@ export default {
 }
 .register-button {
   border: 1px solid whitesmoke;
-  height: 4em;
+  height: 3em;
   width: 10em;
   background: none;
   border-radius: 3em;
   color: whitesmoke;
   font-weight: 600;
   font-size: 15px;
-  margin: 10px;
+  margin: 10px 0 250px 0;
 }
 .register-button:hover {
   background: whitesmoke;
